@@ -132,7 +132,7 @@ Based on the clustering results, here are some high-level observations on the pa
   - **Demographics:** Older population with varied weight ranges and moderate hospital stays.  
   - **Observations:** Shows a balanced mix of lab and procedural counts.
 
-3 **Clusters 5–15:**  
+3 **Clusters 5–13:**  
   - **Variations:**is a bit different ication counts) with readmission rates ranging from as low as 0% (Cluster 10) to 50% (Cluster 7).  
   - **Note:** Some clusters are very small (e.g., Cluster 3, Cluster 7) and might rst ou| Cluster | Dominant Race / Gender                                                 | Typical Age Range                                  | Typical Weight Range                                             | Hospital Stay (Days) | Readmission Rate | Additional Observations                                                      |
 |---------|------------------------------------------------------------------------|----------------------------------------------------|------------------------------------------------------------------|----------------------|------------------|------------------------------------------------------------------------------|
