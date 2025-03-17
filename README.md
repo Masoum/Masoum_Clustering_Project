@@ -2,7 +2,11 @@
 
 ## Overview
 
-This project explores dataset of diabetic patient encounters. The goal is to analyze patient demographics, clinical factors, and readmission patterns by applying clustering techniques. This analysis helps potentially guiding targeted interventions and improving patient care.
+This project explores dataset of diabetic patient encounters.
+
+https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008 
+
+The goal is to analyze patient demographics, clinical factors, and readmission patterns by applying clustering techniques. This analysis helps potentially guiding targeted interventions and improving patient care.
 
 ## Dataset Description
 
@@ -81,7 +85,8 @@ The dataset includes multiple variables grouped into three main categories:
 ## Data Preprocessing
 
 Before analysis, the dataset underwent several preprocessing steps:
-- **Handling Missing Values:** Missing entries were addressed based on the variable’s importance and distribution.
+- **Handling Missing Values:** most of id features:'encounter_id','patient_nbr', 'admission_type_id','discharge_disposition_id','admission_source_id'.
+  irrelavant features to 'readmitted' like: 'payer_code','examide', 'citoglipton', 'glipizide-metformin', 'glimepiride-pioglitazone','metformin-rosiglitazone','metformin-pioglitazone','troglitazone','acetohexamide'
 - **Encoding Categorical Variables:** Categorical variables were encoded by ordinalEncoder
 - **Normalization:** Continuous variables were scaled by StandardScaler
 
@@ -134,22 +139,4 @@ Based on the clustering results, here are some high-level observations on the pa
 
 3 **Clusters 5–13:**  
   - **Variations:**is a bit different ication counts) with readmission rates ranging from as low as 0% (Cluster 10) to 50% (Cluster 7).  
-  - **Note:** Some clusters are very small (e.g., Cluster 3, Cluster 7) and might rst ou| Cluster | Dominant Race / Gender                                                 | Typical Age Range                                  | Typical Weight Range                                             | Hospital Stay (Days) | Readmission Rate | Additional Observations                                                      |
-|---------|------------------------------------------------------------------------|----------------------------------------------------|------------------------------------------------------------------|----------------------|------------------|------------------------------------------------------------------------------|
-| 0       | Predominantly Caucasian; mixed genders (with some African American)      | Mostly older (∼70–80, ∼80–90)                       | Mostly (50–75); occasional lower ([25–50]) or higher ([100–125])   | 3–6                  | 8.43%            | Large group with moderate stays & lab/procedure counts                       |
-| 1       | Predominantly Caucasian; many females in younger age groups              | Younger to mid (∼20–30, ∼40–50, some [50–60])         | Mainly (50–75), with some higher ([125–150])                      | 1–12                 | 12.50%           | Younger patients with relatively higher readmission rate                     |
-| 2       | Almost entirely Caucasian (majority female)                            | Older (∼70–80 to ∼80–90)                             | (50–75) to [100–125]                                               | Around 6–7           | 27.93%           | High-risk group; highest readmission rate among larger clusters              |
-| 3       | Exclusively Caucasian females (small group)                            | Middle-age to older ([40–50] to [80–90])              | Mostly (50–75)                                                   | 3–9                  | 33.33%           | Extremely small group with a notably high readmission rate                   |
-| 4       | Predominantly Caucasian; slightly more males                           | Mostly older ([70–80] to [90–100))                   | Mostly (50–75)                                                   | 5–8                  | 12.38%           | Consistent older patients with moderate hospital stays                      |
-| 5       | Predominantly Caucasian; mixed genders                                   | Mid-age (∼50–60 to ∼70–80)                           | Mostly (75–100); occasional outlier ([150–175])                    | Generally short (2–10)| 9.81%            | Lower readmission; overall stable clinical profile                           |
-| 6       | Caucasian; both genders                                                  | [60–70) to (70–80)                                  | Consistently (100–125)                                             | 2–3                  | 10.48%           | Consistent short stays among older patients with higher weight               |
-| 7       | Exclusively Caucasian                                                  | Mostly (70–80) (with one (50–60) case)               | Uniformly (75–100)                                                | Variable (1–11)      | 50.00%           | Very small group (only 2–3 patients) with an unusually high rate             |
-| 8       | Predominantly Caucasian with some African American; mixed genders        | Younger to mid (∼40–50 to ∼60–70)                   | Mainly (75–100); occasional high ([150–175])                       | 2–6                  | 9.59%            | Mixed characteristics; majority are younger with short stays                 |
-| 9       | Likely older Caucasian females                                           | Very old (90–100)                               | (50–75)                                                          | ∼3                   | 3.64%            | Represents a group of very elderly patients with low readmission rate          |
-| 10      | Single Caucasian female                                                  | (80–90)                                           | (75–100)                                                         | 11                   | 0.00%            | Outlier; a single patient with a long stay and no readmission                |
-| 11      | Predominantly Caucasian                                                  | Wide range ([30–40) up to [70–80] or more)           | Varies ((75–100) to [125–150])                                     | Variable (1–14)      | 7.14%            | Small group with diverse ages and lengths of stay                            |
-| 12      | Predominantly Caucasian                                                  | Mid-age ((50–60) to (70–80))                        | Mostly (75–100)                                                  | Short (2–8)          | 6.90%            | Relatively low readmission; smaller, stable cluster                          |
-| 13      | Likely predominantly Caucasian; mixed genders                           | Likely older (pattern similar to clusters 0 & 4)    | Mixed (commonly (75–100] or higher)                                | Moderate             | 13.85%           | Large group with moderately high readmission; further analysis needed        |
-            |
-
-
+  - **Note:** Some clusters are very small (e.g., Cluster 3, Cluster 7) and might rst ou| Cluster | Dominant Race / Gender                                        
